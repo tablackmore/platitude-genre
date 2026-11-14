@@ -1,5 +1,5 @@
 {
-  "_note": "DRAFT — maps MTG-Jamendo genre tags to the aurum taxonomy. The electronic-family mappings are the important ones for genre-v2; the broader root mappings are heuristic and worth a human review before a production run.",
+  "_note": "DRAFT — maps MTG-Jamendo genre tags to the platitude taxonomy. The electronic-family mappings are the important ones for genre-v2; the broader root mappings are heuristic and worth a human review before a production run.",
   "root_map": {
     "electronic": "electronic", "techno": "electronic", "house": "electronic",
     "trance": "electronic", "ambient": "electronic", "dubstep": "electronic",

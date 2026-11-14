@@ -30,7 +30,7 @@ def filter_permissive(df: pd.DataFrame, license_col: str) -> pd.DataFrame:
 
 def build_notice(df: pd.DataFrame) -> str:
     lines = [
-        "AURUM genre model — training data attribution (CC BY).",
+        "Platitude genre model — training data attribution (CC BY).",
         "Trained on Free Music Archive tracks under CC-BY/CC0/public-domain.",
         "",
     ]

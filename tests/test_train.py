@@ -1,6 +1,6 @@
 import torch
-from aurum_genre.model import ShortChunkCNN
-from aurum_genre.train import train_one_epoch
+from platitude_genre.model import ShortChunkCNN
+from platitude_genre.train import train_one_epoch
 
 def test_loss_decreases_on_repeated_tiny_batch():
     torch.manual_seed(0)
@@ -27,7 +27,7 @@ def test_train_one_epoch_with_mixup_runs_and_is_finite():
 
 def test_fit_records_config_and_seed(tmp_path):
     import torch, torchaudio, pandas as pd
-    from aurum_genre.train import fit
+    from platitude_genre.train import fit
     sr = 16000
     rows = []
     for i in range(40):
@@ -49,7 +49,7 @@ def test_val_macro_auc_is_deterministic_across_calls(tmp_path):
     """Early stopping / best-checkpoint selection must compare epochs on the
     same audio slices — repeated scoring of one model must give one number."""
     import torchaudio, pandas as pd
-    from aurum_genre.train import _val_macro_auc
+    from platitude_genre.train import _val_macro_auc
     sr = 16000
     roots = ["electronic", "rock"]
     rows = []

@@ -1,6 +1,6 @@
 import numpy as np, torch, onnxruntime as ort
-from aurum_genre.model import ShortChunkCNN
-from aurum_genre.export import export_onnx
+from platitude_genre.model import ShortChunkCNN
+from platitude_genre.export import export_onnx
 
 def test_export_matches_torch(tmp_path):
     torch.manual_seed(0)
