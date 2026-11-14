@@ -1,12 +1,12 @@
 import hashlib
 import json
-from aurum_genre.provenance import (sha256_file, manifest_track_hash,
+from platitude_genre.provenance import (sha256_file, manifest_track_hash,
                                      build_run_manifest, write_run_manifest,
                                      git_info)
 
 def test_sha256_file_matches_hashlib(tmp_path):
-    p = tmp_path / "x.bin"; p.write_bytes(b"aurum")
-    assert sha256_file(p) == hashlib.sha256(b"aurum").hexdigest()
+    p = tmp_path / "x.bin"; p.write_bytes(b"platitude")
+    assert sha256_file(p) == hashlib.sha256(b"platitude").hexdigest()
 
 def test_manifest_track_hash_is_order_independent(tmp_path):
     import pandas as pd

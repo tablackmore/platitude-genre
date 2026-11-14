@@ -18,14 +18,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 # Allow `python scripts/run_pipeline.py` (script mode) to import the `scripts`
-# package + `aurum_genre` by putting the repo root on the path.
+# package + `platitude_genre` by putting the repo root on the path.
 sys.path.insert(0, str(ROOT))
 
 import datetime as _dt
-from aurum_genre import train, eval as geval, export  # noqa: E402
-from aurum_genre import provenance  # noqa: E402
-from aurum_genre.seed import seed_everything  # noqa: E402
-from aurum_genre.mel import SR, N_FFT, HOP, N_MELS, CHUNK_SAMPLES  # noqa: E402
+from platitude_genre import train, eval as geval, export  # noqa: E402
+from platitude_genre import provenance  # noqa: E402
+from platitude_genre.seed import seed_everything  # noqa: E402
+from platitude_genre.mel import SR, N_FFT, HOP, N_MELS, CHUNK_SAMPLES  # noqa: E402
 from scripts.build_manifest import build as build_manifest  # noqa: E402
 from scripts import package_release  # noqa: E402
 
@@ -75,7 +75,7 @@ def main() -> None:
 
     print(f"[2/5] training ({a.epochs} epochs) ...")
     # Pass the val split so training keeps the best-on-validation checkpoint and
-    # can early-stop (see aurum_genre.train.fit). Cache dir from AURUM_CACHE_DIR.
+    # can early-stop (see platitude_genre.train.fit). Cache dir from PLATITUDE_CACHE_DIR.
     train.fit(str(train_csv), a.epochs, str(ckpt), val_manifest=str(val_csv), seed=a.seed)
 
     print("[3/5] evaluating on the validation split (chunk-averaged, as served) ...")
@@ -124,7 +124,7 @@ def main() -> None:
     print("\n" + "=" * 60)
     print(f"validation macro-AUC (chunk-avg) = {auc:.4f}   (advisory bar {a.min_auc:.2f}) → {verdict}")
     print(f"release assets ready in: {rel}")
-    print("Publish:  gh release create genre-v1 -R tablackmore/aurum-genre "
+    print("Publish:  gh release create genre-v1 -R tablackmore/platitude-genre "
           f"{rel}/genre.onnx {rel}/taxonomy.json {rel}/thresholds.json "
           f"{rel}/mel_recipe.txt {rel}/NOTICE {rel}/license_manifest.csv")
     print("=" * 60)

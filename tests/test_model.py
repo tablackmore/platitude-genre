@@ -1,5 +1,5 @@
 import torch
-from aurum_genre.model import ShortChunkCNN
+from platitude_genre.model import ShortChunkCNN
 
 
 def test_forward_output_shape():

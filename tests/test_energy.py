@@ -1,5 +1,5 @@
 import numpy as np
-from aurum_genre.energy import energy
+from platitude_genre.energy import energy
 
 
 def test_range_and_silence():

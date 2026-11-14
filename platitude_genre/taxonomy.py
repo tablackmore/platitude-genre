@@ -1,4 +1,4 @@
-"""Load the genre taxonomy and map FMA root genres onto AURUM root labels.
+"""Load the genre taxonomy and map FMA root genres onto Platitude root labels.
 
 `fma_root_map` is authoritative; a genre listed in `dropped` (or absent from
 both) maps to None (intentionally excluded from training)."""

@@ -21,10 +21,10 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from aurum_genre.model import ShortChunkCNN
-from aurum_genre.taxonomy import load_taxonomy, root_labels
-from aurum_genre.export import export_onnx
-from aurum_genre.mel import log_mel, CHUNK_SAMPLES
+from platitude_genre.model import ShortChunkCNN
+from platitude_genre.taxonomy import load_taxonomy, root_labels
+from platitude_genre.export import export_onnx
+from platitude_genre.mel import log_mel, CHUNK_SAMPLES
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent

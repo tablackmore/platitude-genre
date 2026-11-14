@@ -1,5 +1,5 @@
 import torch
-from aurum_genre.dataset import multihot, GenreChunkDataset, class_pos_weights
+from platitude_genre.dataset import multihot, GenreChunkDataset, class_pos_weights
 
 ROOTS = ["electronic", "rock", "pop"]
 
@@ -74,7 +74,7 @@ def test_dataset_yields_mel_and_target(tmp_path):
 def test_cache_writes_once_and_reuses(tmp_path):
     import torchaudio
     import pandas as pd
-    from aurum_genre.dataset import _cache_path
+    from platitude_genre.dataset import _cache_path
     from pathlib import Path
     sr = 16000
     wav = (0.2 * torch.sin(2 * torch.pi * 220 *
@@ -100,7 +100,7 @@ def test_deterministic_dataset_returns_center_chunk_repeatably(tmp_path):
     """deterministic=True must always yield the same (center) chunk, so val
     metrics are comparable across epochs (model selection isn't chunk-lottery)."""
     import torchaudio, pandas as pd
-    from aurum_genre.mel import log_mel, CHUNK_SAMPLES
+    from platitude_genre.mel import log_mel, CHUNK_SAMPLES
     sr = 16000
     torch.manual_seed(0)
     wav = (torch.rand(1, sr * 5) * 2 - 1) * 0.5        # noise → chunks differ

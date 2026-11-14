@@ -1,7 +1,7 @@
 import random
 import numpy as np
 import torch
-from aurum_genre.seed import seed_everything
+from platitude_genre.seed import seed_everything
 
 def test_seed_makes_draws_reproducible():
     seed_everything(123)

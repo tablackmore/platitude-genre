@@ -13,8 +13,8 @@ import argparse
 import ast
 from pathlib import Path
 import pandas as pd
-from aurum_genre.licenses import filter_permissive, build_notice
-from aurum_genre.taxonomy import load_taxonomy, map_fma_root, map_fma_subgenres
+from platitude_genre.licenses import filter_permissive, build_notice
+from platitude_genre.taxonomy import load_taxonomy, map_fma_root, map_fma_subgenres
 
 
 def _load_genre_id_titles(fma_meta: str | Path) -> dict[int, str]:

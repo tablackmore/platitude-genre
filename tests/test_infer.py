@@ -1,6 +1,6 @@
 import numpy as np
-from aurum_genre.infer import average_chunk_probs, _chunks
-from aurum_genre.mel import CHUNK_SAMPLES
+from platitude_genre.infer import average_chunk_probs, _chunks
+from platitude_genre.mel import CHUNK_SAMPLES
 
 
 def test_average_chunk_probs_is_mean_over_chunks():
