@@ -1,6 +1,6 @@
 # Training `genre-v1`
 
-This produces the `genre.onnx` + config that Platitude ships. The whole pipeline is
+This produces the `genre.onnx` + config that Stemulous ships. The whole pipeline is
 automated — you pick **where** to run it and **which FMA subset** to train on.
 
 ## 1. Pick a subset
@@ -27,9 +27,9 @@ then `medium` for the model you actually ship.
 **Colab is the recommended path** — free GPU, nothing to install, reproducible.
 
 ### A) Colab (recommended)
-1. Open **`notebooks/train_genre_colab.ipynb`** in Colab (github.com/tablackmore/platitude-genre → the notebook → "Open in Colab", or upload it).
+1. Open **`notebooks/train_genre_colab.ipynb`** in Colab (github.com/tablackmore/stemulous-genre → the notebook → "Open in Colab", or upload it).
 2. **Runtime → Change runtime type → T4 GPU.**
-3. Because the repo is **private**, add a Colab secret **`GH_TOKEN`** (🔑 sidebar) = a fine-grained PAT with `Contents:read` on `tablackmore/platitude-genre`. *(Or make the repo public and skip this — see §4.)*
+3. Because the repo is **private**, add a Colab secret **`GH_TOKEN`** (🔑 sidebar) = a fine-grained PAT with `Contents:read` on `tablackmore/stemulous-genre`. *(Or make the repo public and skip this — see §4.)*
 4. Set `SUBSET`/`EPOCHS` in the third cell, then **Runtime → Run all**.
 5. The last cell downloads `genre-v1.zip` (all release assets).
 
@@ -63,11 +63,11 @@ first bar; if it's low, train more epochs or move from `small`→`medium`.
 
 ```bash
 # from the run's output — publish the release asset:
-gh release create genre-v1 -R tablackmore/platitude-genre \
+gh release create genre-v1 -R tablackmore/stemulous-genre \
   release/genre.onnx release/taxonomy.json release/thresholds.json \
   release/mel_recipe.txt release/NOTICE release/license_manifest.csv
 ```
-Then in the **platitude** repo, `scripts/fetch-models.sh` already knows how to pull
+Then in the **stemulous-pro** repo, `scripts/fetch-models.sh` already knows how to pull
 `genre.onnx` + config from this release. Re-run it, rebuild, and the app tags on
 import + via "Re-tag library".
 
@@ -75,7 +75,7 @@ When you're happy with a shipped model, **flip `platitude-genre` public** (the d
 intends it to be open) so the Colab clone needs no token and the release is fetchable
 without auth:
 ```bash
-gh repo edit tablackmore/platitude-genre --visibility public
+gh repo edit tablackmore/stemulous-genre --visibility public
 ```
 
 ## Pipeline internals (for reference)

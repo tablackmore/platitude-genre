@@ -124,7 +124,7 @@ def main() -> None:
     print("\n" + "=" * 60)
     print(f"validation macro-AUC (chunk-avg) = {auc:.4f}   (advisory bar {a.min_auc:.2f}) → {verdict}")
     print(f"release assets ready in: {rel}")
-    print("Publish:  gh release create genre-v1 -R tablackmore/platitude-genre "
+    print("Publish:  gh release create genre-v1 -R tablackmore/stemulous-genre "
           f"{rel}/genre.onnx {rel}/taxonomy.json {rel}/thresholds.json "
           f"{rel}/mel_recipe.txt {rel}/NOTICE {rel}/license_manifest.csv")
     print("=" * 60)

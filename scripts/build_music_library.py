@@ -91,14 +91,14 @@ def build(out_dir: Path) -> None:
 
     n_fma, n_jam = len(fma_rows), len(jam_rows)
     (out_dir / "NOTICE").write_text(
-        "Platitude free-to-use music library — attribution\n\n"
+        "Stemulous free-to-use music library — attribution\n\n"
         "All tracks are permissively licensed (CC-BY / CC0 / public domain).\n"
         f"  - FMA-large permissive subset: {n_fma} tracks (https://freemusicarchive.org)\n"
         f"  - MTG-Jamendo CC-BY subset:    {n_jam} tracks (https://www.jamendo.com)\n\n"
         "Per-track artist, title, and license are in library_manifest.csv.\n"
         "CC-BY requires attribution to the listed artist on use.\n")
     (out_dir / "README.md").write_text(
-        "# Platitude free-to-use music library\n\n"
+        "# Stemulous free-to-use music library\n\n"
         f"{n_fma + n_jam} permissively-licensed tracks (CC-BY / CC0 / public domain), "
         "consolidated for reuse and future model retraining.\n\n"
         "## Layout\n"

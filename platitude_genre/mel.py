@@ -26,7 +26,7 @@ def log_mel(waveform: torch.Tensor) -> torch.Tensor:
 
 def mel_recipe() -> str:
     return (
-        "Platitude genre mel recipe (Rust must match exactly):\n"
+        "Stemulous genre mel recipe (Rust must match exactly):\n"
         "sample_rate=16000\nn_fft=512\nhop=256\nn_mels=128\n"
         "power=2.0 center=True norm=None mel_scale=htk\n"
         "log=log10(clamp(mel, min=1e-7))\n"
