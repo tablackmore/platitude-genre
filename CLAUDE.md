@@ -1,4 +1,4 @@
-# platitude-genre: agent notes
+# stemulous-genre: agent notes
 
 Workspace conventions live in ~/aurum/CLAUDE.md on Tom's Mac; this file carries the rules every machine (incl. the Windows laptop) must follow.
 

@@ -1,5 +1,5 @@
 import pandas as pd
-from platitude_genre.licenses import is_permissive, filter_permissive, build_notice
+from stemulous_genre.licenses import is_permissive, filter_permissive, build_notice
 
 def test_permissive_classification():
     assert is_permissive("Attribution 4.0 International (CC BY 4.0)")

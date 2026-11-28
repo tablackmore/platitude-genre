@@ -2,7 +2,7 @@
 
 Reads the MTG metadata we already have (autotagging_genre.tsv for genre tags,
 audio_licenses.txt for per-track license), keeps CC-BY / CC0 / public-domain
-tracks, maps Jamendo genre tags to platitude roots + `electronic:<sub>` labels via
+tracks, maps Jamendo genre tags to stemulous roots + `electronic:<sub>` labels via
 scripts/jamendo_genre_map.json, and points filepaths at the downloaded audio.
 
 The resulting manifest has the SAME schema as scripts/build_manifest.py output,

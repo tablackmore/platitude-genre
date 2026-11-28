@@ -13,7 +13,7 @@ the shipped thresholds are calibrated on).
     pip install -r requirements.lock          # exact pinned versions
     pip install -e ".[dev]"
     bash scripts/download_fma.sh <subset> data # SHA1-verified audio
-    export PLATITUDE_CACHE_DIR=data/cache
+    export STEMULOUS_CACHE_DIR=data/cache
     python scripts/run_pipeline.py --subset <subset> --epochs 60 --seed 1337
 
 Verify against a prior `run_manifest.json`:

@@ -1,5 +1,5 @@
 import torch
-from platitude_genre.mel import log_mel, mel_recipe, SR, N_MELS, CHUNK_SAMPLES
+from stemulous_genre.mel import log_mel, mel_recipe, SR, N_MELS, CHUNK_SAMPLES
 
 
 def test_log_mel_shape_and_finiteness():

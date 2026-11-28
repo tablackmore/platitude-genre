@@ -4,7 +4,7 @@ import textwrap
 from pathlib import Path
 import pandas as pd
 import pytest
-from platitude_genre.licenses import is_permissive
+from stemulous_genre.licenses import is_permissive
 
 
 def _write_fake_tracks_csv(path: Path) -> None:

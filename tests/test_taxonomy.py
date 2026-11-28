@@ -1,4 +1,4 @@
-from platitude_genre.taxonomy import (load_taxonomy, root_labels, map_fma_root,
+from stemulous_genre.taxonomy import (load_taxonomy, root_labels, map_fma_root,
                                   output_labels, map_fma_subgenres)
 
 def test_root_labels_are_ordered_and_unique():
