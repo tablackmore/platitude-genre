@@ -8,8 +8,8 @@ import sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from platitude_genre import train, eval as geval, export  # noqa: E402
-from platitude_genre.seed import seed_everything  # noqa: E402
+from stemulous_genre import train, eval as geval, export  # noqa: E402
+from stemulous_genre.seed import seed_everything  # noqa: E402
 
 
 def main() -> None:

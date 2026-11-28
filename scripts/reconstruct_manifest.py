@@ -8,8 +8,8 @@ data/train_run.log and the baseline commit 22905ff that trained the model.
 The git.commit is pinned to that baseline, NOT live HEAD."""
 from __future__ import annotations
 from pathlib import Path
-from platitude_genre import provenance, eval as geval
-from platitude_genre.mel import SR, N_FFT, HOP, N_MELS, CHUNK_SAMPLES
+from stemulous_genre import provenance, eval as geval
+from stemulous_genre.mel import SR, N_FFT, HOP, N_MELS, CHUNK_SAMPLES
 
 # Baseline commit whose working tree trained genre-v1 (before SP1 / seeding).
 GENRE_V1_COMMIT = "22905ff89ee1dbb91b71442ffa21d4b12820a82c"

@@ -4,4 +4,4 @@ mkdir -p release
 python scripts/build_manifest.py --fma-meta data/fma_metadata \
   --fma-audio data/fma_medium --out data/manifest.csv --notice release/NOTICE \
   --license-manifest release/license_manifest.csv
-python -m platitude_genre.train --manifest data/manifest.csv --epochs 50 --out genre.pt
+python -m stemulous_genre.train --manifest data/manifest.csv --epochs 50 --out genre.pt

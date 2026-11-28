@@ -46,7 +46,7 @@ def env_info(device) -> dict:
 
 def build_run_manifest(*, repo_dir, seed, hyperparameters, dataset, device,
                        metrics, mel_recipe, timestamps) -> dict:
-    return {"schema": "platitude-genre/run-manifest/1",
+    return {"schema": "stemulous-genre/run-manifest/1",
             "git": git_info(repo_dir), "seed": seed,
             "hyperparameters": hyperparameters, "dataset": dataset,
             "environment": env_info(device), "metrics": metrics,

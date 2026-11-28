@@ -1,5 +1,5 @@
 import numpy as np
-from platitude_genre.eval import macro_auc, calibrate_thresholds
+from stemulous_genre.eval import macro_auc, calibrate_thresholds
 
 def test_macro_auc_perfect_separation_is_one():
     y_true = np.array([[1,0],[0,1],[1,0],[0,1]])
@@ -14,8 +14,8 @@ def test_calibrate_picks_separating_threshold():
 
 def test_chunk_averaged_metrics_shape(tmp_path):
     import torch, torchaudio, pandas as pd
-    from platitude_genre.train import fit
-    from platitude_genre.eval import chunk_averaged_metrics
+    from stemulous_genre.train import fit
+    from stemulous_genre.eval import chunk_averaged_metrics
     sr = 16000
     rows = []
     for i in range(40):
@@ -35,7 +35,7 @@ def test_chunk_averaged_metrics_shape(tmp_path):
 def _tiny_ckpt_and_manifest(tmp_path, n_tracks=12, secs=8):
     """Train a 1-epoch model on n_tracks sine tracks; returns (ckpt, manifest)."""
     import torch, torchaudio, pandas as pd
-    from platitude_genre.train import fit
+    from stemulous_genre.train import fit
     sr = 16000
     rows = []
     for i in range(n_tracks):
@@ -51,7 +51,7 @@ def _tiny_ckpt_and_manifest(tmp_path, n_tracks=12, secs=8):
 
 def test_track_scores_reports_skipped_tracks(tmp_path):
     import pandas as pd
-    from platitude_genre.eval import track_scores
+    from stemulous_genre.eval import track_scores
     ckpt, man = _tiny_ckpt_and_manifest(tmp_path, n_tracks=8, secs=4)
     bad = tmp_path / "bad.mp3"; bad.write_bytes(b"not audio")
     df = pd.read_csv(man)
@@ -66,7 +66,7 @@ def test_evaluate_calibrates_on_chunk_averaged_scores(tmp_path):
     """Thresholds must be tuned on the same chunk-averaged scores that
     production inference (infer.tag_track) applies them to."""
     import json
-    from platitude_genre.eval import (evaluate, track_scores, calibrate_thresholds,
+    from stemulous_genre.eval import (evaluate, track_scores, calibrate_thresholds,
                                   macro_auc)
     ckpt, man = _tiny_ckpt_and_manifest(tmp_path)
     out = tmp_path / "thresholds.json"

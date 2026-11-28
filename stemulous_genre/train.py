@@ -10,7 +10,7 @@ from .model import ShortChunkCNN
 from .seed import seed_everything, worker_init_fn
 from .taxonomy import load_taxonomy, output_labels
 
-# train.py lives at platitude_genre/train.py → parent.parent is the repo root
+# train.py lives at stemulous_genre/train.py → parent.parent is the repo root
 _DEFAULT_TAXONOMY = Path(__file__).resolve().parent.parent / "taxonomy.json"
 
 def default_device() -> str:

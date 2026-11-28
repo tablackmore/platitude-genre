@@ -92,8 +92,8 @@ class GenreChunkDataset(Dataset):
         # same manifest score the same audio (stable val metrics for early
         # stopping / model selection). Training keeps random chunks.
         self.deterministic = deterministic
-        # Decoded-audio cache: explicit arg wins, else PLATITUDE_CACHE_DIR, else disabled.
-        cache_dir = cache_dir or os.environ.get("PLATITUDE_CACHE_DIR") or None
+        # Decoded-audio cache: explicit arg wins, else STEMULOUS_CACHE_DIR, else disabled.
+        cache_dir = cache_dir or os.environ.get("STEMULOUS_CACHE_DIR") or None
         self.cache_dir = Path(cache_dir) if cache_dir else None
         if self.cache_dir is not None:
             self.cache_dir.mkdir(parents=True, exist_ok=True)
